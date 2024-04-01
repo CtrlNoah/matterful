@@ -23,12 +23,25 @@ body {
 }
 
 .loader {
-    width: 75px;
-    height: 75px;
-    border: 10px solid rgba(12, 49, 12, 0.6);
-    border-radius: 50%;
-    border-left-color: aqua;
-    animation: loader 1.3s ease-out infinite;
+    position: relative;
+    font-size: 10vw;
+    color: #fff;
+    -webkit-text-stroke: 0.3vw #00000083;
+    text-transform: uppercase;
+}
+
+.loader::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #000;
+    -webkit-text-stroke: 0vw #000;
+    border-right: 5px solid #000;
+    overflow: hidden;
+    animation: animate 5s linear infinite;
 }
 
 .hide {
@@ -36,9 +49,18 @@ body {
     transform: scale(.1);
 }
 
-@keyframes loader {
+
+@keyframes animate {
+
+    0%,
+    10%,
     100% {
-        transform: rotate(360deg);
+        width: 0;
+    }
+
+    70%,
+    90% {
+        width: 100%;
     }
 }
 
@@ -230,6 +252,45 @@ body {
     z-index: 4;
 }
 
+.image-before,
+.image-after {
+    position: relative;
+    animation: sizer 3s linear infinite;
+}
+
+
+.comparison-container {
+    height: 607px;
+    overflow: hidden;
+}
+
+.image-after {
+    height: 100%;
+}
+
+@keyframes sizer {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+
+.comparison_image {
+    height: 100%;
+
+}
+
+.image-before {
+    height: 100%;
+}
+
+.comparison_image_first {
+    height: 100%;
+}
 
 .third-brand {
     margin-top: 30px;
