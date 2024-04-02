@@ -11,7 +11,6 @@ window.addEventListener('load', () => {
 let indexValue = 0;
 function slideShow() {
     setTimeout(slideShow, 2000)
-    let x;
     const imageComparison = document.querySelectorAll('.comparison');
     for (let x = 0; x < imageComparison.length; x++) {
         imageComparison[x].style.display = 'none';

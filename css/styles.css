@@ -269,12 +269,24 @@ body {
 }
 
 @keyframes sizer {
-    from {
+
+    0%,
+    10% {
         transform: scale(1);
+
     }
 
-    to {
-        transform: scale(0);
+    50%,
+    60%,
+    70%,
+    80% {
+        transform: scale(.8);
+    }
+
+    90%,
+    100% {
+        transform: scale(.5);
+        background-color: transparent;
     }
 }
 
