@@ -713,6 +713,7 @@ body {
     background-color: transparent;
     width: 503px;
     color: #fff;
+    padding-bottom: 5px;
 }
 
 .input-email::placeholder {
@@ -735,7 +736,28 @@ body {
     padding: 20px 24px;
     margin-left: 30px;
     border: 1px solid rgb(255, 255, 255);
+    transition: all 1s linear;
 }
+
+.button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+#form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#text {
+    display: block;
+    color: #000;
+    font-weight: 300;
+    font-style: italic;
+    padding: 5px;
+}
+
 
 /* footer */
 

@@ -1,14 +1,14 @@
-let mask = document.querySelector('.mask');
+// let mask = document.querySelector('.mask');
 
-window.addEventListener('load', () => {
-    mask.classList.add('hide');
-    setTimeout(() => {
-        mask.remove();
-    }, 800)
-});
+// window.addEventListener('load', () => {
+//     mask.classList.add('hide');
+//     setTimeout(() => {
+//         mask.remove();
+//     }, 800)
+// });
 
 
-
+// Первый сладер
 const slideLeft = document.querySelector('.vector-left');
 const slideRight = document.querySelector('.vector-right');
 const imageCompare = document.querySelector('.image-comparison_before');
@@ -35,7 +35,7 @@ imageCompare.addEventListener('click', () => {
 
 
 
-
+// Второй слайдшоу
 let indexValue = 0;
 function slideShow() {
     setTimeout(slideShow, 2000)
@@ -50,6 +50,48 @@ function slideShow() {
     imageComparison[indexValue - 1].style.display = 'block';
 }
 slideShow();
+
+
+// Валидация формы 
+function validation() {
+    let form = document.querySelector('#form');
+    let email = document.querySelector('#email').value;
+    let text = document.querySelector('#text');
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+
+    if (email.match(pattern)) {
+        form.classList.add('valid');
+        form.classList.remove('invalid');
+        text.innerHTML = "Your Email Address in Valid.";
+        text.style.color = "#00ff00";
+    } else {
+        form.classList.remove('valid');
+        form.classList.add('invalid');
+        text.innerHTML = "Please Enter Valid Email Address.";
+        text.style.color = "#ff0000";
+    }
+    if (email == "") {
+        form.classList.add('valid');
+        form.classList.remove('invalid');
+        text.innerHTML = "";
+        text.style.color = "#00ff00";
+    }
+
+}
+
+const form = document.querySelector('#form')
+form.addEventListener('submit', function (event) {
+    event.preventDefault();
+    if (document.querySelector('#email').value == '') {
+        alert('Please fill the Email field');
+    } else {
+        alert('Thanks for Your singning up!');
+    }
+})
+
+
+
+
 
 
 

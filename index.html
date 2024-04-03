@@ -68,16 +68,16 @@
                         </div>
                     </div>
                     <div class="image-comparison" data-aos="flip-down" data-aos-duration="1800">
-                            <img src="./img/before-1.png" class="before" alt="">
-                            <img src="./img/after-1.png" class="after" alt="">
-                            <div class="slider">
-                                <img src="./img/svg/vector-left.svg" alt="" class="vector-left">
-                                <img src="./img/svg/vector-right.svg" alt="" class="vector-right">
-                            </div>
-                            <div class="image-comparison_before">
-                                <img src="./img/OPM_Before.jpg.png" class="image-comparison_image" alt="">
-                            </div>
-                            <img src="./img/OPM_After.jpg.png" class="image-comparison_image" alt="">
+                        <img src="./img/before-1.png" class="before" alt="">
+                        <img src="./img/after-1.png" class="after" alt="">
+                        <div class="slider">
+                            <img src="./img/svg/vector-left.svg" alt="" class="vector-left">
+                            <img src="./img/svg/vector-right.svg" alt="" class="vector-right">
+                        </div>
+                        <div class="image-comparison_before">
+                            <img src="./img/OPM_Before.jpg.png" class="image-comparison_image" alt="">
+                        </div>
+                        <img src="./img/OPM_After.jpg.png" class="image-comparison_image" alt="">
                     </div>
                 </div>
                 <div class="third-brand">
@@ -295,8 +295,13 @@
                     <p class="cta-title">Sign Up for Matterful Updates</p>
                     <p class="cta-text">Most newsletters suck but ours won't – we promise!</p>
                 </div>
-                <form action="#">
-                    <input type="email" name="email" placeholder="Your email" required class="input-email" id="">
+                <form action="#" id="form">
+                    <div class="inputBox">
+                        <input type="email" name="email" placeholder="Your email" class="input-email" id="email"
+                            onkeydown="validation()">
+                        <span id="text"></span>
+                    </div>
+
                     <button class="button" type="submit">Submit</button>
                 </form>
             </div>
