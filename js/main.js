@@ -8,6 +8,34 @@ window.addEventListener('load', () => {
 });
 
 
+
+const slideLeft = document.querySelector('.vector-left');
+const slideRight = document.querySelector('.vector-right');
+const imageCompare = document.querySelector('.image-comparison_before');
+const before = document.querySelector('.before')
+
+slideRight.addEventListener('click', function () {
+    imageCompare.classList.add('apear1');
+    imageCompare.classList.remove('apear2');
+    before.style.display = 'block';
+});
+
+slideLeft.addEventListener('click', function () {
+    imageCompare.classList.add('apear2');
+    imageCompare.classList.remove('apear1');
+    before.style.display = 'none';
+});
+
+imageCompare.addEventListener('click', () => {
+    imageCompare.classList.remove('apear1');
+    imageCompare.classList.remove('apear2');
+    before.style.display = 'block';
+});
+
+
+
+
+
 let indexValue = 0;
 function slideShow() {
     setTimeout(slideShow, 2000)
@@ -22,6 +50,12 @@ function slideShow() {
     imageComparison[indexValue - 1].style.display = 'block';
 }
 slideShow();
+
+
+
+
+
+
 
 
 
