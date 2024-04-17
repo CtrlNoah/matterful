@@ -126,5 +126,5 @@ const modalBtn = document.querySelector('.modal__btn');
 
 
 
-AOS.init();
+// AOS.init();
 
