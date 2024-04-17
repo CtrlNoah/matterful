@@ -82,12 +82,32 @@ function validation() {
 const form = document.querySelector('#form')
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    if (document.querySelector('#email').value == '') {
-        alert('Please fill the Email field');
+    let form = document.querySelector('#form');
+    let email = document.querySelector('#email').value;
+    let text = document.querySelector('#text');
+    if (email == "") {
+        form.classList.remove('valid');
+        form.classList.add('invalid');
+        text.innerHTML = "You forgot to fill the blank";
+        text.style.color = "#ff0000";
     } else {
-        alert('Thanks for Your singning up!');
+        modal.classList.add('slit-in-vertical');
+        modal.classList.remove('slit-out-vertical')
     }
+    modalBtn.addEventListener('click', () => {
+        modal.classList.add('slit-out-vertical');
+    });
+
 })
+
+
+// script for modal window
+
+const modal = document.querySelector('.modal');
+const modalChild = document.querySelector('.modal__child');
+const modalBtn = document.querySelector('.modal__btn');
+
+
 
 
 
