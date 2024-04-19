@@ -37,34 +37,30 @@ body {
     position: relative;
     flex-direction: column;
     border-radius: 15px;
-    border: 1px solid red;
-    background-color: #fff;
+    border: 1px solid #fff;
+    background-color: #000;
+
 }
 
 .modal__text {
     text-transform: uppercase;
-
+    color: transparent;
+    background-image: url('../img/monterey.png');
+    background-repeat: no-repeat;
+    background-position: top top;
+    background-clip: text;
+    font-size: 35px;
+    font-weight: bolder;
+    text-align: center;
 }
 
 .modal__btn {
     background-color: transparent;
-    color: #000;
+    color: #fff;
     text-transform: uppercase;
     padding: 5px 25px;
-    margin-top: 50px;
-    transition: all 1s linear;
+    margin-top: 15px;
     position: relative;
-}
-
-.modal__btn:hover {
-    border-left: 10px solid red;
-    border-right: 10px solid red;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.modal__btn:active {
-    top: 2px;
 }
 
 .slit-in-vertical {
@@ -1750,6 +1746,14 @@ body::-webkit-scrollbar-thumb {
     .cta-wrapper {
         margin-left: 10px;
         margin-right: 10px;
+    }
+
+    .modal__text {
+        font-size: 20px;
+    }
+
+    .modal__child {
+        max-width: 350px;
     }
 }
 

@@ -1,11 +1,11 @@
-// let mask = document.querySelector('.mask');
+let mask = document.querySelector('.mask');
 
-// window.addEventListener('load', () => {
-//     mask.classList.add('hide');
-//     setTimeout(() => {
-//         mask.remove();
-//     }, 800)
-// });
+window.addEventListener('load', () => {
+    mask.classList.add('hide');
+    setTimeout(() => {
+        mask.remove();
+    }, 800)
+});
 
 
 // Первый сладер
@@ -126,5 +126,5 @@ const modalBtn = document.querySelector('.modal__btn');
 
 
 
-// AOS.init();
+AOS.init();
 
