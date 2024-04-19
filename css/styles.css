@@ -678,6 +678,7 @@ body {
     font-weight: 700;
     line-height: 42px;
     margin-top: 7px;
+    word-wrap: break-word;
 }
 
 .logo-text {
@@ -691,20 +692,52 @@ body {
 }
 
 .social-pictures {
-    /* max-width: 1890px; */
     margin: 0 auto;
     padding: 15px;
-    display: none;
+    display: flex;
+    flex-direction: column;
 }
 
 
 .social-container1 {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-gap: 30px;
+    display: flex;
     margin-bottom: 30px;
-    align-items: end;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
+.social__1,
+.social__9 {
+    max-width: 100%;
+    height: 215px;
+    align-self: flex-end;
+}
+
+.social__2 {
+    max-width: 100%;
+}
+
+.social__3,
+.social__6 {
+    max-width: 100%;
+    height: 348px;
+    align-self: flex-end;
+}
+
+.social__4 {
+    max-width: 100%;
+    height: 423px;
+    align-self: flex-end;
+}
+
+.social__5,
+.social__8 {
+    max-width: 100%;
+    height: 292px;
+    align-self: flex-end;
+}
+
 
 .social-pictures {
     padding-bottom: 60px;
@@ -712,10 +745,22 @@ body {
 
 
 .social-container2 {
-    display: grid;
-    grid-template-columns: repeat(5, auto);
-    grid-column-gap: 30px;
-    align-items: start;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social__8,
+.social__6,
+.social__9,
+.social__10 {
+    align-self: flex-start;
+    max-width: 100%;
+}
+
+.social__7 {
+    max-width: 100%;
 }
 
 /* section services */
@@ -1466,6 +1511,17 @@ body::-webkit-scrollbar-thumb {
 
     .sixth-brand {
         gap: 30px;
+    }
+
+    .social-pictures {
+        padding: 0;
+        margin: 0 10px;
+    }
+
+    .logo-subtitle,
+    .logo-text {
+        margin-left: 10px;
+        margin-right: 10px;
     }
 }
 
