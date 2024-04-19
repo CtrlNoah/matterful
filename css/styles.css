@@ -901,7 +901,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: end;
-
+    flex-wrap: wrap;
 }
 
 .location-title {
@@ -969,6 +969,11 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.425);
 }
 
+.contact-us-link:hover {
+    background-color: black;
+    color: white;
+}
+
 .contact-container {
     text-align: center;
 }
@@ -999,8 +1004,9 @@ body {
 .cta-wrapper {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 .input-email {
@@ -1065,12 +1071,16 @@ body {
 .footer-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    column-gap: 345px;
+    row-gap: 50px;
 }
 
 .footer-clocks {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 30px;
 }
 
 .logo-footer {
@@ -1083,6 +1093,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .second-clock {
@@ -1530,6 +1541,10 @@ body::-webkit-scrollbar-thumb {
         text-align: center;
     }
 
+    .input-email {
+        width: 100%;
+    }
+
 }
 
 @media (max-width:1024px) {
@@ -1652,7 +1667,10 @@ body::-webkit-scrollbar-thumb {
         font-size: 12px;
     }
 
-
+    .contact-us {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 @media (max-width:425px) {
@@ -1728,6 +1746,11 @@ body::-webkit-scrollbar-thumb {
     .company-logos {
         gap: 10px;
     }
+
+    .cta-wrapper {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }
 
 @media (max-width:350px) {
@@ -1737,6 +1760,14 @@ body::-webkit-scrollbar-thumb {
 
     .after {
         width: 55px !important;
+    }
+
+    .cta-title {
+        font-size: 20px;
+    }
+
+    .cta-text {
+        font-size: 14px;
     }
 }
 
@@ -1752,5 +1783,14 @@ body::-webkit-scrollbar-thumb {
 
     .loncaro-second-text {
         font-size: 14px;
+    }
+
+    .location-title {
+        margin: 0 auto;
+        font-size: 15px;
+    }
+
+    .button {
+        margin-left: 0;
     }
 }
