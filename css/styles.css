@@ -263,9 +263,11 @@ body {
 
 .intro {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: 10px;
+    gap: 15px;
+
 }
 
 .intro-box-1 {
@@ -749,6 +751,7 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 60px;
 }
 
 .social__8,
@@ -796,7 +799,7 @@ body {
     flex-wrap: wrap;
     text-align: center;
     margin-top: 34px;
-    justify-content: space-between;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -838,6 +841,7 @@ body {
     margin: 0 auto;
     gap: 30px;
     align-items: center;
+    justify-content: center;
     padding: 15px 15px 0 15px;
 }
 
@@ -872,7 +876,8 @@ body {
 /* locations */
 .locations {
     display: flex;
-    /* flex-wrap: wrap; */
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .first-location {
@@ -1518,11 +1523,13 @@ body::-webkit-scrollbar-thumb {
         margin: 0 10px;
     }
 
-    .logo-subtitle,
-    .logo-text {
+
+    .services__info {
         margin-left: 10px;
         margin-right: 10px;
+        text-align: center;
     }
+
 }
 
 @media (max-width:1024px) {
@@ -1590,6 +1597,12 @@ body::-webkit-scrollbar-thumb {
 
     .intro-box-2 {
         width: 100%;
+    }
+}
+
+@media (max-width:588px) {
+    .icon-wrapper figure {
+        max-width: 150px;
     }
 }
 
@@ -1705,6 +1718,15 @@ body::-webkit-scrollbar-thumb {
 
     .review-card {
         padding: 20px;
+    }
+
+    .companies-text {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .company-logos {
+        gap: 10px;
     }
 }
 
