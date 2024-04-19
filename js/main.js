@@ -82,9 +82,9 @@ function validation() {
 const form = document.querySelector('#form')
 form.addEventListener('submit', function (event) {
     event.preventDefault();
-    let form = document.querySelector('#form');
-    let email = document.querySelector('#email').value;
-    let text = document.querySelector('#text');
+    const form = document.querySelector('#form');
+    const email = document.querySelector('#email').value;
+    const text = document.querySelector('#text');
     if (email == "") {
         form.classList.remove('valid');
         form.classList.add('invalid');

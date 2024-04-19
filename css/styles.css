@@ -225,6 +225,7 @@ body {
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 
@@ -321,7 +322,7 @@ body {
     margin-top: 32px;
     flex-wrap: wrap;
     margin-bottom: 30px;
-    margin-right: 30px;
+    margin-right: 44px;
     display: flex;
     text-align: end;
 }
@@ -371,6 +372,7 @@ body {
     gap: 30px;
     flex-wrap: wrap;
     margin: 0 30px;
+    justify-content: center;
 }
 
 .second-brand_first {
@@ -395,12 +397,14 @@ body {
 
 .image-comparison_image {
     height: 100%;
+    border-radius: 8px;
 }
 
 .image-comparison_before {
     position: absolute;
     width: 50%;
     overflow: hidden;
+    border-radius: 8px;
 }
 
 
@@ -495,6 +499,7 @@ body {
 
 .comparison_image {
     height: 100%;
+    max-width: 100%;
 
 }
 
@@ -515,10 +520,40 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
+}
+
+.weidos__img {
+    width: 37%;
+}
+
+.mezcla__img {
+    width: 96.3%;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.mezcla__container {
+    width: 54.9%;
+}
+
+.mezcla__info {
+    width: 96.3%;
+    margin: 0 auto;
 }
 
 .forth-brand {
     margin-top: 30px;
+    display: flex;
+    margin-left: 30px;
+}
+
+.toum__info {
+    width: 100%;
+}
+
+.toum__img {
+    max-width: 100%;
 }
 
 
@@ -526,16 +561,36 @@ body {
     margin-top: 30px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-
+    justify-content: center;
+    gap: 30px;
 }
+
+.comparison_image_first,
+.lebby__after,
+.twoGood__img {
+    max-width: 100%;
+}
+
+.twoGood__info {
+    width: 100%;
+}
+
 
 
 .sixth-brand {
     margin-top: 30px;
     display: flex;
-    /* flex-wrap: wrap; */
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 102px;
+    justify-content: center;
+}
+
+.juice__img {
+    max-width: 100%;
+}
+
+.juice__info {
+    width: 100%;
 }
 
 .review {
@@ -545,6 +600,7 @@ body {
     padding: 30px 45px;
     display: flex;
     align-items: center;
+    max-width: 34%;
 }
 
 .review-card {
@@ -578,15 +634,30 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     padding-bottom: 30px;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.purpose__img {
+    border-radius: 8px;
+    max-width: 100%;
 }
 
 .seventh-brand div {
     background-color: #fff;
 }
 
+.beets__img {
+    max-width: 100%;
+}
+
 .width-content {
-    width: 570px;
+    width: 100%
+}
+
+.beets__container {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    max-width: 100%;
 }
 
 /* first section end */
@@ -1388,9 +1459,62 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* media queries */
+@media (max-width:1165px) {
+    .review {
+        max-width: 57.5%;
+    }
+
+    .sixth-brand {
+        gap: 30px;
+    }
+}
+
+@media (max-width:1024px) {
+    .first-brand {
+        justify-content: center;
+        margin-right: 0;
+    }
+
+    .third-brand-wrapper {
+        flex-direction: column;
+        margin: 0 10px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .weidos__img {
+        width: 45%;
+    }
+
+    .forth-brand {
+        margin-left: 10px;
+        margin-right: 10px;
+        justify-content: center;
+    }
+
+    .fifth-brand,
+    .sixth-brand,
+    .seventh-brand {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .review {
+        max-width: 69%;
+        padding: 0;
+    }
+
+
+}
+
+
 @media (max-width:900px) {
     .intro-box-2 {
         width: 70%;
+    }
+
+    .review {
+        max-width: 75%;
     }
 }
 
@@ -1402,6 +1526,10 @@ body::-webkit-scrollbar-thumb {
 
     .intro-box-1 {
         flex-basis: 0;
+    }
+
+    .review {
+        max-width: 100%;
     }
 
     .intro-box-2 {
@@ -1472,6 +1600,22 @@ body::-webkit-scrollbar-thumb {
         width: 100%;
     }
 
+    .mezcla__info {
+        width: 100%;
+    }
+
+    .mezcla__container {
+        width: 100%;
+    }
+
+    .mezcla__img {
+        width: 100%;
+    }
+
+    .weidos__img {
+        width: 100%;
+    }
+
     .second-brand_first {
         width: 100%;
     }
@@ -1481,10 +1625,30 @@ body::-webkit-scrollbar-thumb {
     }
 
     .slider {
-        width: 55px;
-        height: 55px;
+        width: 115px;
+        height: 115px;
         left: 50%;
+        border-radius: 50%;
         transform: translate(-50%);
+    }
+
+    .vector-right,
+    .vector-left {
+        width: 20px;
+        height: 30px;
+        position: relative;
+    }
+
+    .vector-right:active {
+        left: 5px;
+    }
+
+    .vector-left:active {
+        right: 5px;
+    }
+
+    .review-card {
+        padding: 20px;
     }
 }
 
