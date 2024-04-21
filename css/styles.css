@@ -14,7 +14,7 @@ body {
     width: 100%;
     height: 100%;
     position: fixed;
-    background-color: #0000006b;
+    background-color: #000000c9;
     left: 0;
     top: 0;
     display: flex;
@@ -23,11 +23,10 @@ body {
     align-items: center;
     display: none;
     transition: all 1s linear;
-
 }
 
 .modal__child {
-    max-width: 500px;
+    max-width: 600px;
     height: 250px;
     background-color: transparent;
     display: flex;
@@ -38,7 +37,7 @@ body {
     flex-direction: column;
     border-radius: 15px;
     border: 1px solid #fff;
-    background-color: #000;
+    background-color: #00000093;
 
 }
 
@@ -52,16 +51,95 @@ body {
     font-size: 35px;
     font-weight: bolder;
     text-align: center;
+    margin-bottom: 20px;
+    line-height: 140%;
 }
 
 .modal__btn {
     background-color: transparent;
     color: #fff;
     text-transform: uppercase;
-    padding: 5px 25px;
+    padding: 15px 30px;
     margin-top: 15px;
     position: relative;
+    color: #21f356;
+    letter-spacing: 4px;
+    overflow: hidden;
+    border: 0;
+    transition: 0.2s;
 }
+
+.button__line {
+    position: absolute;
+    display: block;
+}
+
+.button__line_top {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #21f356);
+}
+
+.modal__btn:hover .button__line_top {
+    left: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button__line_bottom {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #21f356);
+}
+
+.modal__btn:hover .button__line_bottom {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button__line_left {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(0deg, transparent, #21f356);
+}
+
+.modal__btn:hover .button__line_left {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.button__line_right {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #21f356);
+}
+
+.modal__btn:hover .button__line_right {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+}
+
+.modal__btn:hover {
+    box-shadow: 0 0 10px #21f356, 0 0 40px #21f356, 0 0 80px #21f356;
+    background-color: #21f356;
+    color: #fff;
+    font-weight: bold;
+    transition-delay: 1s;
+}
+
+
+
 
 .slit-in-vertical {
     -webkit-animation: slit-in-vertical 0.45s ease-out both;
@@ -700,9 +778,45 @@ body {
 .social-container1 {
     display: flex;
     margin-bottom: 30px;
+    padding: 15px 0;
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    background: #fff
+}
+
+.glow::after,
+.glow::before {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #e6fb84, #ff6600, #00ff66, #00ffff,
+            #ff00ff, #ff0099, #6e0dd8, #ff3300, #099fff);
+    background-size: 400%;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow::after {
+    filter: blur(100px);
 }
 
 .social__1,
@@ -747,7 +861,9 @@ body {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 60px;
+    position: relative;
+    background: #fff;
+    padding: 15px 0;
 }
 
 .social__8,
