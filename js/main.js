@@ -1,11 +1,11 @@
-let mask = document.querySelector('.mask');
+// let mask = document.querySelector('.mask');
 
-window.addEventListener('load', () => {
-    mask.classList.add('hide');
-    setTimeout(() => {
-        mask.remove();
-    }, 800)
-});
+// window.addEventListener('load', () => {
+//     mask.classList.add('hide');
+//     setTimeout(() => {
+//         mask.remove();
+//     }, 800)
+// });
 
 
 // Первый сладер
@@ -31,7 +31,6 @@ imageCompare.addEventListener('click', () => {
     imageCompare.classList.remove('apear2');
     before.style.display = 'block';
 });
-
 
 
 
@@ -106,23 +105,6 @@ form.addEventListener('submit', function (event) {
 const modal = document.querySelector('.modal');
 const modalChild = document.querySelector('.modal__child');
 const modalBtn = document.querySelector('.modal__btn');
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
