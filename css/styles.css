@@ -1382,12 +1382,27 @@ body {
 
 .social-logos {
     margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
-.instagram,
-.twitter {
-    margin-left: 10px;
+.facebook_parent:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 10px #4267B2, 0 0 40px #4267B2, 0 0 80px #4267B2, 0 0 100px #4267B2;
 }
+
+.instagram_parent:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 10px #833AB4, 0 0 40px #C13584, 0 0 80px #FD1D1D, 0 0 100px #FCAF45;
+}
+
+.twitter_parent:hover {
+    border-radius: 50%;
+    box-shadow: 0 0 10px #1DA1F2, 0 0 40px #1DA1F2, 0 0 80px #1DA1F2, 0 0 100px #1DA1F2;
+}
+
 
 .rights {
     background-color: #000;
