@@ -1,12 +1,23 @@
-// let mask = document.querySelector('.mask');
+let mask = document.querySelector('.mask');
 
-// window.addEventListener('load', () => {
-//     mask.classList.add('hide');
-//     setTimeout(() => {
-//         mask.remove();
-//     }, 800)
-// });
+window.addEventListener('load', () => {
+    mask.classList.add('hide');
+    setTimeout(() => {
+        mask.remove();
+    }, 800)
+});
 
+// Top button
+const topBtn = document.querySelector('.top__parent');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset>500) {
+        // topBtn.classList.add('add');
+        topBtn.classList.add('bounce-in-top');
+    } else {
+        // topBtn.classList.remove('add');
+        topBtn.classList.remove('bounce-in-top');
+    }
+})
 
 // Первый сладер
 const slideLeft = document.querySelector('.vector-left');
