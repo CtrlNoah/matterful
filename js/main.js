@@ -10,11 +10,9 @@ window.addEventListener('load', () => {
 // Top button
 const topBtn = document.querySelector('.top__parent');
 window.addEventListener('scroll', () => {
-    if (window.pageYOffset>500) {
-        // topBtn.classList.add('add');
+    if (window.pageYOffset>400) {
         topBtn.classList.add('bounce-in-top');
     } else {
-        // topBtn.classList.remove('add');
         topBtn.classList.remove('bounce-in-top');
     }
 })
